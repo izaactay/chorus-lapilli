@@ -177,11 +177,22 @@ export default function Game() {
 
   return (
     <div className="game">
+      <div className="container-instructions">
+      <div className="game-instructions">
+        <h1>Chorus Lapilli: The Game</h1>
+        <p>Rules: Chorus lapilli is like tic-tac-toe in that players take turn placing pieces on a 3×3 board and the goal is to get three pieces in a row. However, it differs from tic-tac-toe in two ways: <br></br>
+
+            1. After your first three moves, instead of adding further pieces you must instead move one of your existing pieces to an adjacent empty square. Therefore, after your third move you always occupy three squares. The move can be up, down, left, right, or diagonal.<br></br>
+            2. If it is your turn to move and you have three pieces on the board and one of your pieces is in the center square, your move must either win or vacate the center square.</p>
+      </div>
+      </div>
+      <div className="container-game">
       <div className="game-board">
         <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} moveCount={currentMove}/>
       </div>
       <div className="game-info">
         <ol>{moves}</ol>
+      </div>
       </div>
     </div>
   );
