@@ -12,6 +12,10 @@ function Square({ value, onSquareClick,SqColor }) {
 }
 
 function Board({ xIsNext, squares, onPlay, moveCount}) {
+
+  //nextSquares[9][0] is the select flag
+  //nextSquares[9][1] is the update history flag
+  //nextSquares[9][2] is the previous square moved
   
   const prevSelected = squares[9][2];
   function handleClick(i) {
